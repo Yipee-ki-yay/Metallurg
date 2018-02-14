@@ -1,0 +1,968 @@
+@import "vars"
+@import "icomoon"
+@import "fonts"
+@import "libs"
+
+*
+	-webkit-box-sizing: inherit
+	-moz-box-sizing: inherit
+	box-sizing: inherit
+	&:before, &:after
+		-webkit-box-sizing: inherit
+		-moz-box-sizing: inherit
+		box-sizing: inherit
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #E5E5E5
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.wrapper
+	max-width: 1784px
+	margin: 0 auto
+
+.flexing
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+
+.flex-default
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+
+// begin header ================================================ 
+.header
+	margin-bottom: 16px
+.header-search
+	background-color: #fff
+	height: 46px
+	font-family: $default-font
+	font-size: 14px
+	line-height: 16px
+	color: #1B1E1F
+	&__descr
+		padding-left: 180px
+		font-weight: 500
+		margin-top: 20px;
+		margin-bottom: 10px
+	&__search
+		font-size: 0
+		position: relative
+		padding-top: 15px
+
+.header-search__btn		
+	position: absolute	
+	top: 50%
+	left: -37px
+	transform: translateY(-50%)
+	border: none
+	background-color: transparent
+	padding: 0
+	margin: 0
+	font-size: 16px
+	color: #000
+.header-search__btn-lang
+	display: block
+	margin: auto 0
+	border: none
+	background-color: transparent
+	font-size: 14px
+	line-height: 16px
+	font-weight: 400
+
+.header-search__submenu-langs
+	font-size: 14px
+	line-height: 16px
+	font-weight: 400
+.header-search__submenu-langs
+	display: none
+	position: absolute
+	right: -22px
+	top: 33px
+	z-index: 1
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 25px 25px 13px 10px
+		background-color: #fff
+		li			
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			a
+				font-family: $default-font
+				font-style: normal
+				font-weight: normal
+				line-height: normal
+				font-size: 14px
+				color: #8d8f8f
+				text-decoration: none
+				&:hover
+					color: #1B1E1F
+
+.header-search__btn-langs-wrap:hover .header-search__submenu-langs
+	display: block
+
+.header-nav
+	background-color: $accent
+	height: 99px
+	font-size: 0
+
+.header-menu
+	list-style-type: none
+	padding-left: 180px
+	display: inline-block
+	&__item 
+		display: inline-block
+		margin-right: 52px
+		margin-top: 37px
+		a 
+			color: #fff
+			font-family: $default-font
+			font-weight: 500
+			font-size: 18px
+			text-decoration: none
+			cursor: pointer
+			transition: all 0.6s ease
+			&:hover
+				color: $accent-yellow
+			&:active
+				color: $active-yellow
+
+.header-social
+	list-style-type: none
+	display: inline-block	
+	margin-right: -2px; 
+	&__item
+		display: inline-block
+		margin-left: 15px
+		margin-top: 26px;	
+		
+.header-social__link
+	position: relative
+	color: #fff
+	font-size: 22px
+	text-decoration: none
+	cursor: pointer
+	display: inline-block	
+	height: 47px
+	width: 47px
+	border: 1px solid #fff
+	border-radius: 50%
+	transition: all 0.6s ease
+	&:hover
+		border-color: $accent-yellow	
+		span
+			color: $accent-yellow
+	&:active
+		border-color: $active-yellow
+		span
+			color: $active-yellow
+	span
+		position: absolute
+		top: 50%
+		left: 50%		
+		transform: translate(-50%, -50%)
+		color: #fff
+		transition: all 0.6s ease
+		
+
+.header-logo
+	height: 31px
+	background-color: $accent-yellow
+	.wrapper
+		position: relative
+		a
+			position: absolute			
+			left: -5px
+			bottom: -38px
+			transition: all 0.6s ease
+			&:hover
+				transform: scale(1.05)
+
+
+
+// end header  ================================================ 
+
+// begin info =================================================
+.info
+	margin-bottom: 34px
+.main-slider 
+	max-width: 1334px
+.main-slider__item 
+	position: relative
+	max-width: 1334px
+.main-slider__item-descr 
+	position: absolute
+	left: 9%
+	bottom: 15%
+	display: inline-block
+	width: 70%
+	margin: 0
+	padding: 27px 222px 26px 40px
+	font-family: $default-font
+	font-style: normal
+	font-weight: bold
+	line-height: 54px
+	font-size: 40px
+	color: #1B1E1F
+	background-color: #F5F7EF
+	border-radius: 4px
+	border-left: 16px solid $accent
+// == slick slider style==================================== 
+	// main-slider	===================================
+.main-slider
+	position: relative
+	.slick-dots
+		position: absolute
+		left: 2.2%
+		top: 91.5%
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: inline-block
+			margin: 0 8px 0 0;
+			padding: 0
+			button
+				display: block
+				width: 24px
+				height: 24px
+				padding: 0
+				font-size: 0
+				line-height: 0
+				border: 0
+				background-color: $accent-yellow
+		li.slick-active 
+			button
+				background-color: $accent
+
+	// secondary slider =================================
+.secondary-slider
+	max-width: 434px
+.secondary-slider__header
+	position: relative
+	margin-bottom: 13px
+.secondary-slider__descr
+	display: inline-block
+	margin: 0
+	margin-right: 50%
+	font-family: $default-font
+	font-weight: normal
+	line-height: 26px
+	font-size: 18px
+	color: #1B1E1F
+.secondary-slider__navigation
+	display: inline-block
+	text-align: right
+	button
+		position: absolute
+		right: 29px
+		top: 0
+		border: none
+		background-color: transparent
+		font-size: 18px
+	.slick-next
+		right: 5px
+
+.secondary-slider__slider
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+	margin-bottom: 17px
+.secondary-slider__footer
+	font-size: 0
+	padding: 16px 24px 24px 24px
+	background-color: #fff
+.secondary-slider_information
+	margin-bottom: 6px
+.secondary-slider__footer span.icon-soccer-ball
+	color: #1B1E1F
+	opacity: 0.5
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	line-height: 20px
+	font-size: 17px
+	margin-right: 4px
+.secondary-slider__date
+	display: inline-block
+	vertical-align: top
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	line-height: 20px
+	font-size: 12px
+	color: #1B1E1F
+	opacity: 0.5
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)	
+	margin-right: 127px
+.secondary-slider__addition
+	display: inline-block
+	vertical-align: top
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	line-height: 20px
+	font-size: 12px
+	text-align: right
+	color: #1B1E1F
+.secondary-slider__team
+	margin: 0
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 28px
+	font-size: 18px
+	color: #1B1E1F
+	span
+		font-weight: 400
+	// end secondary slider =================================
+
+.best-player-card
+	padding: 8px 16px
+	background-color: $accent-yellow
+	border-right: 8px solid $accent
+	border-left: 8px solid $accent
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 4px
+	.icon-cup
+		position: relative
+		font-size: 71px;
+		.path1, .path2
+			position: absolute
+			top: 13px
+			&:before
+				margin: 0
+.best-player-descr
+	display: inline-block
+	margin-left: 56px
+	max-width: 229px
+	vertical-align: top
+.best-player-descr__text
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 13px
+	font-size: 10px
+	color: #1B1E1F
+	opacity: 0.5
+	margin-top: 12px
+.best-player-descr__name
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 30px
+	font-size: 24px
+	color: #1B1E1F
+.best-player__img
+	vertical-align: top
+// end info ===================================================
+
+// begin statistics ==========================================
+.statistics
+	margin-bottom: 40px
+.statistics-items
+	background: $accent-yellow
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+	padding: 38px 0 28px
+	font-size: 0
+.statistics-item
+	display: inline-block
+	width: 25%
+	height: 171px
+	border-right: 1px solid rgba(27,30,31, .2)
+	span[class^="icon"]
+		color: #1B1E1F
+		opacity: 0.3
+		font-size: 79px
+		margin-left: 72px
+		transition: all 0.6s ease
+	&:last-child
+		border: none
+	&:hover
+		span[class^="icon"]
+			color: $accent
+			opacity: 1
+		
+
+.statistics-wrap
+	display: inline-block
+	font-size: 0
+	margin-left: 32px
+	margin-top: 45px
+.statistics-item__num
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: normal
+	font-size: 48px
+	color: $accent
+.statistics-item__text
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	font-size: 18px
+	color: #1B1E1F
+
+// end statistics ==========================================
+
+//begin Section news ======================================
+.news
+	margin-bottom: 32px
+.sections-header
+	background-color: $accent
+	color: #fff
+	padding: 12px 16px
+	margin-bottom: 7px
+.sections-header__text-item
+	display: inline-block
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 26px
+	font-size: 18px
+	margin-right: 40px
+
+.sections-header__link-item
+	color: #fff
+	text-decoration: none
+	font-family: $default-font
+	font-style: normal
+	font-weight: bold
+	line-height: 26px
+	font-size: 18px
+	opacity: 0.9
+	transition: all 0.6s ease
+	&:hover
+		color: $accent-yellow
+		text-decoration: none
+	&:active
+		color: $active-yellow
+		text-decoration: none
+
+.news-item
+	max-width: 434px
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+	img
+		width: 100%
+		height: auto
+.news-item__footer
+	padding: 24px
+	background-color: #fff
+	h4
+		margin: 0		
+		margin-bottom: 5px
+		font-family: $default-font
+		font-style: normal
+		font-weight: 500
+		line-height: 30px
+		font-size: 20px
+		color: #1B1E1F
+	p
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		line-height: 24px
+		font-size: 14px
+		color: #1B1E1F
+		opacity: 0.5
+		margin: 0
+		margin-right: 50px
+		margin-bottom: 11px
+	span.news-item__name
+		display: inline-block
+		width: 96.5%
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		line-height: 26px
+		font-size: 18px
+		color: #151717		
+	a
+		transition: all 0.3s ease
+		&:hover
+			text-decoration: none
+			color: $accent
+		&:active
+			color: $active-yellow
+		span
+		color: $accent-yellow
+
+//end Section news ========================================
+
+// begin tournament-info =================================
+
+.tournament-info
+	margin-bottom: 32px
+.tournament-players
+	width: 24.32%
+.tournament-players__cards
+	background-color: #fff
+	padding: 24px 24px 2px
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+	h5
+		font-family: $default-font
+		font-style: normal
+		font-weight: 500
+		line-height: 26px
+		font-size: 14px
+		color: #1B1E1F
+		margin: 0
+
+.hr
+	width: 100%
+	height: 2px
+	background-color: #000000
+	opacity: 0.2
+	margin: 10px 0 16px
+
+.tournament-players__card
+	margin-bottom: 16px
+.tournament-players__card-name	
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 26px
+	font-size: 18px
+	color: #1B1E1F
+	margin: 0
+	margin-bottom: 5px
+.tournament-players__card-descr
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	line-height: 26px
+	font-size: 14px
+	color: #1B1E1F
+	opacity: 0.4
+
+
+.tournament-table
+	max-width: 884px
+	width: 884px
+	.sections-header
+		margin-bottom: 10px
+.tournament-table__table
+	border-collapse: collapse
+	width: 100%
+	background-color: #fff
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+	td, th
+		border-bottom: 1px solid rgba(0,0,0, 0.07)
+		border-left: 1px solid rgba(0,0,0, 0.2)
+		text-align: left
+		padding: 11px 24px
+	th
+		font-family: $default-font
+		font-style: normal
+		font-weight: 500
+		line-height: 26px
+		font-size: 14px
+		color: #1B1E1F
+		padding: 25px 24px 3px
+		&:first-child
+			border-left: none
+	td
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		line-height: 26px
+		font-size: 18px
+		color: #1B1E1F
+		&:first-child
+			width: 10.3%
+			border-left: none
+		&:nth-child(2)
+			width: 48.1%
+		&:nth-child(3)
+			width: 20.5%
+		&:last-child
+			width: 20.5%
+		img
+			margin-right: 7px
+	tr:last-child 
+		td
+			padding-bottom: 24px
+
+.tournament-table__team-metallurg	
+	background: #494b4c
+	td
+		color: #fff
+
+// tabs
+.tournament-tab-content
+	display: none
+.tournament-tab-content.active
+	display: table
+
+
+// end tabs
+.tournament-tabs-titles-wrap
+	display: inline-block
+.sections-header__text-descr
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 26px
+	font-size: 14px
+	margin-right: 18px
+.tournament-tab
+	cursor: pointer
+	opacity: 0.5
+
+.tournament-tab.active
+	border-bottom: 4px solid #fff
+	border-radius: 4px
+	padding-bottom: 5px
+	opacity: 1
+	transition: border-bottom-color 0.6s ease
+	&:hover
+		border-bottom-color: $accent-yellow
+.sections-header__text-sec
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	line-height: 26px
+	font-size: 14px
+	
+// end tournament-info =================================
+
+// begin youtube-and-products
+.youtube-and-products
+	margin-bottom: 62px
+.slider-youtube-wrap, 
+.products
+	max-width: 884px
+.slider-youtube-wrap
+	.sections-header a
+		color: #fff
+		transition: all 0.6s ease
+		&:hover
+			color: $accent-yellow
+
+.slider-youtube
+	background-color: #fff
+	padding: 32px 24px 25px
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+.slider-youtube__for
+	margin-bottom: 9px
+.slider-youtube__for-item
+	max-height: 352px
+	img
+		width: 100%		
+.slider-youtube__nav-item
+	max-width: 154px
+	max-height: 115px
+	img
+		width: 154px
+		height: 115px
+
+.products
+	width: 884px
+.products-item
+	max-width: 434px
+	p
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		line-height: 24px
+		font-size: 14px
+		color: #8d8f8f
+		margin-right: 80px
+		margin-bottom: 7px
+	button		
+		position: absolute
+		bottom: 16px
+		right: 16px
+		width: 42px
+		height: 42px
+		border: none
+		border-left: 8px solid $accent
+		padding: 0
+		background: #E8E8E8
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+		border-radius: 4px
+		transition: border-left-color 0.6s ease
+		&:hover			
+			border-left-color: $accent-yellow
+
+.products-item__footer
+	position: relative
+	padding: 24px 16px 16px 24px
+	background: #FFFFFF
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+	border-radius: 2px
+.products-item__title,
+.products-item__price
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 26px
+	font-size: 18px
+	color: #1B1E1F
+.products-item__title
+	margin-right: 165px
+.products-item__size
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 26px
+	font-size: 18px
+	color: #8c8e8e
+// end youtube-and-products
+
+// begin footer
+.footer
+	position: relative
+	background-color: #262829
+	.hr
+		background-color: #515354
+		opacity: 1
+		height: 1px
+		margin-top: 32.5px
+		margin-bottom: 16px
+.partners
+	// min-height: 125px
+	min-height: 120px
+	background-color: $accent-yellow
+	.wrapper
+		// min-height: 125px
+		min-height: 120px
+	.flexing
+		align-items: center
+	div
+		opacity: 0.6
+		transition: all 0.6s ease
+		&:hover
+			opacity: 1
+	h5
+		position: relative
+		font-family: $default-font
+		font-style: normal
+		font-weight: 500
+		line-height: normal
+		font-size: 18px
+		text-transform: uppercase
+		color: #1B1E1F
+		margin-right: 57px
+		&:after
+			content: ''
+			right: -26px;
+			top: -13px;
+			position: absolute
+			height: 48px
+			width: 1px
+			background-color: #8d7734
+
+.contacts
+	font-family: $default-font
+	color: #FFFFFF
+	width: 16.8%
+	// margin-right: 146px
+	margin-right: 8.18%
+	p
+		line-height: 24px
+		font-size: 14px
+		font-weight: normal
+		margin-bottom: 24px
+		a
+			color: #fff
+			transition: all 0.6s ease
+			&:hover
+				color: $accent-yellow
+p.contacts__job
+	line-height: 30px
+
+h5.h5-footer
+	font-family: $default-font
+	font-style: normal
+	font-weight: 500
+	line-height: 26px
+	font-size: 18px
+	color: #FFFFFF
+	margin-top: 50px
+	margin-bottom: 25px
+
+.feedback	
+	// max-width: 331px
+	width: 18.55%
+	margin-right: 8.4%
+	.h5-footer
+		margin-bottom: 16px
+	&:before
+		content: ''
+		position: absolute
+		width: 1px
+		height: 286px
+		background-color: #515354
+		top: 153px
+		left: 471px
+.feedback-form
+	&__name,
+	&__mail,
+	&__text
+		background-color: #262829
+		border: 0.5px solid #979797
+		border-radius: 2px
+		padding: 8px 16px
+		width: 100%
+		margin-bottom: 16px
+		font-family: $default-font
+		font-style: normal
+		font-weight: normal
+		line-height: 26px
+		font-size: 14px
+		color: #929394
+	&__text
+		height: 110px
+		margin-bottom: 15px
+	&__btn
+		border: none
+		border-left: 8px solid $accent
+		color: $accent
+		padding: 8px 48px 8px 40px
+		background: #E8E8E8
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)
+		border-radius: 4px
+		font-family: $default-font
+		font-style: normal
+		font-weight: 500
+		line-height: 26px
+		font-size: 18px
+		transition: all 0.6s ease
+		&:hover
+			border-color: $accent-yellow
+
+.footer-social
+	width: 48.09%
+	.h5-footer
+		margin-bottom: 17px
+	&:before
+		content: ''
+		position: absolute
+		width: 1px
+		height: 286px
+		background-color: #515354
+		top: 153px
+		left: 951px
+.footer-social__item
+	position: relative
+	width: 100%
+	margin-right: 7px
+	&:last-child
+		margin-right: 0
+	a
+		display: block
+		max-width: 273px
+		width: 100%
+		span[class^="icon"]
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			height: 47px
+			width: 47px
+			color: $accent-yellow
+			font-size: 22px
+			text-decoration: none
+			border: 1px solid $accent-yellow
+			border-radius: 50%
+			transition: all 0.6s ease
+			text-align: center
+			line-height: 47px
+			transition: all 0.6s ease
+		&:hover
+			span
+				border-color: $active-yellow
+				color: $active-yellow
+// end footer
+
+
+// begin website-developers
+.website-developers	
+	font-family: $default-font
+	font-style: normal
+	font-weight: normal
+	line-height: normal
+	font-size: 12px
+	color: #FFFFFF
+	padding-bottom: 25px
+	span
+		vertical-align: middle
+
+	.make-in		
+		a
+			color: #fff
+			text-decoration: none
+			transition: color 0.6s ease
+			&:hover
+				color: $accent-yellow
+		span.icon-logo_z
+			font-size: 23px
+			margin-left: 3px
+	.website__title
+		line-height: 23px
+
+// end website-developers
+
+
+
+
+
+
+@import "media" // Всегда в конце
