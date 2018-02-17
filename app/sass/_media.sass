@@ -19,7 +19,334 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	// begin header 
+	.header-search__search,
+	.header-menus-wrapper
+		display: none
+
+	.header-search
+		text-align: center
+		&__descr
+			padding-left: 0
+			margin: 20px auto 10px
+
+	.header-nav
+		max-height: 56px
+		.wrapper
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+		.header-search__btn
+			display: block
+			height: 56px			
+			span:before
+				color: #fff
+
+		// hamburger-btn ================================= //
+		.hamburger-btn
+			display: inline-block
+			margin-top: 23px
+		.header-menu
+			margin-left: 24px	
+			margin-top: 76px		
+			padding: 0
+		.header-menu__item
+			display: block
+			margin-top: 0
+			&:before
+				content: ''
+				display: block
+				margin: 12px 0
+				width: 18px
+				height: 2px
+				border-radius: 10px
+				background-color: #eb6259
+			&:first-child:before
+				display: none
+			&:first-child:after
+				position: absolute
+				top: 30px
+				left: 24px
+				content: 'Меню'				
+				font-family: $default-font
+				font-style: normal
+				font-weight: 500
+				line-height: normal
+				font-size: 24px
+				color: #FFFFFF
+		.header-social
+			padding: 0
+			margin: 0
+			margin-left: 50%
+			transform: translateX(-50%)		
+		.header-menus-wrapper
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 2
+			background-color: $accent
+			width: 100%
+			height: 100vh
+		.header-menus-wrapper.menus-open 
+			.close-hamburger-menu 
+				display: block
+			
+
+
+	.header-logo 
+		background-color: #E5E5E5
+		.wrapper
+			a		
+				bottom: -12px		
+				left: 50%
+				margin-left: -34px	
+				&:hover
+					transform: scale(1.05)
+		img 
+			max-width: 68px
+	// end header 
+	// begin Section info		
+	.info,
+	.news,
+	.tournament-info,
+	.youtube-and-products
+		max-width: 100%
+		margin: 0 auto 32px
+		.flexing
+			flex-wrap: wrap
+		.main-slider
+			max-width: 100%
+			max-height: 563px	
+			margin-bottom: 25px		
+			.main-slider__item
+				width: 100%
+				img
+					max-height: 563px	
+					height: auto
+					width: auto
+				&-descr
+					line-height: 34px
+					font-size: 24px
+					top: 314px
+					bottom: auto
+					left: 10px
+					width: 94.36%
+					padding: 24px 23px 24px 32px
+		.secondary-slider
+			max-width: 100%
+			.secondary-slider-item
+				width: 100%
+				img
+					width: 100%
+
+	// == slick slider style==================================== 
+	.main-slider
+		.slick-dots
+			left: 10px
+			top: auto
+			bottom: 20px
+	// == end slick slider style================================ 
+	.secondary-slider__descr
+		line-height: 20px
+		font-size: 14px
+	.secondary-slider__date
+		margin-right: 95px
+	.best-player-card
+		padding: 8px
+	.best-player-descr
+		max-width: 145px
+	.best-player-descr__text,
+	.best-player-descr__name
+		line-height: 23px
+		font-size: 18px
+
+	// end Section info
+
+	// begin statistics
+	.statistics
+		display: none
+	// end statistics
+	
+	// begin news 
+	.sections-header__text-item
+		line-height: 26px
+		font-size: 14px
+	.sections-header__link-item
+		line-height: 22px
+		font-size: 14px
+
+	.news-item
+		margin-bottom: 10px
+		display: none
+		&:nth-child(1)
+			display: block
+		&:nth-child(2)
+			display: block
+	.news-item__footer
+		h4
+			line-height: 28px
+			font-size: 18px
+		p
+			line-height: 18px
+			font-size: 12px
+		span.news-item__name
+			line-height: 26px
+			font-size: 14px
+			width: 95.5%
+	// end news
+
+	// begin Section tournament-info
+	.tournament-info
+		.flexing
+			flex-wrap: wrap
+	.tournament-players
+		width: 100%
+		&:first-child
+			margin-bottom: 32px
+		&__card-descr
+			line-height: 18px
+			font-size: 12px
+
+	.tournament-table		
+		width: 100%
+		.sections-header
+			position: relative
+			margin-bottom: 55px
+		.tournament-tabs-titles-wrap		
+			position: absolute
+			top: 120%
+			left: 0
+			width: 100%
+			font-size: 0
+			.tournament-tab
+				line-height: 22px
+				font-size: 14px
+				color: #1B1E1F
+				display: inline-block
+				width: 50%
+				margin: 0
+				text-align: center
+				border-bottom: 5px solid #ddd
+				border-radius: 4px
+				padding-bottom: 5px
+				color: #868888
+				opacity: 1
+				&.active
+					border-bottom: 5px solid $accent
+					color: #1B1E1F
+	.tournament-tabs-content-wrap
+		margin-bottom: 32px
+	.tournament-table__table 
+		th, td
+			padding: 12px 8px 12px 8px
+	// end Section tournament-info
+
+	// begin youtube-and-products
+
+	.youtube-and-products
+		.flexing
+			flex-wrap: wrap
+
+	.slider-youtube-wrap
+		max-width: 100%
+		margin-bottom: 32px
+
+	.slider-youtube
+		max-width: 100%
+		padding: 10px
+	.slider-youtube__for
+		width: 100%
+	
+		
+	.slider-youtube__nav
+		.slick-current
+	.slider-youtube__nav-item
+		max-width: 97%
+		width: 97%
+		img
+			width: 100%
+
+	.products
+		width: 100%
+	.products-items.flexing
+		flex-wrap: wrap
+	.products-item
+		max-width: 100%
+		margin-bottom: 10px
+		img
+			width: 100%
+		&__title
+			margin-right: 24%;
+		p
+			line-height: 18px
+			font-size: 12px
+
+	// end youtube-and-products
+
+	// begin partners
+	.partners
+		.wrapper.flexing
+			flex-wrap: wrap
+		h5
+			width: 100%
+			text-align: center
+			margin: 0
+			margin-top: 24px
+			margin-bottom: 42px
+			&::after
+				transform: rotate(90deg)
+				right: 50%;
+				top: 18px;
+				height: 19px
+		.partners-item
+			width: 50%
+			text-align: center
+			margin-bottom: 35px
+			img
+				width: 90%
+	// end partners
+
+	// begin contacts
+	.contacts
+		width: 100%		
+	// end contacts
+
+	// begin feedback
+	.feedback
+		width: 100%
+		margin: 0
+		&:before
+			transform: rotate(90deg)
+			top: 650px
+			left: 50%
+			height: 355px
+	// end feedback
+
+	// begin footer-social
+	.footer-social
+		width: 100%
+		&:before
+			transform: rotate(90deg)
+			top: 1050px
+			left: 50%
+			height: 355px
+	.footer-social__item
+		width: 32%
+	.footer-social__link
+		width: 100%
+		img
+			width: 100%
+			opacity: 0.4
+
+	// end footer-social
+
+	
+	
 	/**/
+
 
 
 /* Custom, iPhone Retina */

@@ -1,3 +1,45 @@
+
+//===============begin hamburger mobile menu
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const mobileMenus = document.querySelector('.header-menus-wrapper');
+const closeMobileMenusBtn = document.querySelector('.close-hamburger-menu');
+const mainMenu = document.querySelector('.header-menu');
+const mainMenuItems = document.getElementsByClassName('header-menu__item');
+const sportClubMenus = document.getElementsByClassName('sport-club-menu');
+const mainCastMenus = document.getElementsByClassName('main-cast-menu');
+
+hamburgerBtn.addEventListener("click", function(event){
+	event.preventDefault();
+	mobileMenus.classList.add('menus-open');
+});
+
+closeMobileMenusBtn.addEventListener("click", function(event){
+	event.preventDefault();
+	mobileMenus.classList.remove('menus-open');
+});
+
+mainMenu.addEventListener("click", function(event){	
+	let target = event.target;
+	if(target.className == "header-menu__link") {
+		event.preventDefault();
+		for (var i = 0; i < sportClubMenus.length; i++) {
+			sportClubMenus[i].classList.remove('menus-open');
+		}
+		let secMenu = target.parentNode.getElementsByClassName('sport-club-menu');
+		secMenu[0].classList.add('menus-open');
+	}
+	else if(target.className == "sport-club-menu__link") {
+		event.preventDefault();
+		for (var i = 0; i < mainCastMenus.length; i++) {
+			mainCastMenus[i].classList.remove('menus-open');
+		}
+		let thirdMenu = target.parentNode.getElementsByClassName('main-cast-menu');
+		thirdMenu[0].classList.add('menus-open');
+	}
+});
+//===============end hamburger mobile menu
+
+
 // =============== begin tournament-tabs
 
 const tabs = document.querySelectorAll(".tournament-tab");
@@ -17,8 +59,6 @@ tabsWrap.addEventListener("click", (e) => {
 		});
 	}
 });
-
-
 // =============== end tournament-tabs
 
 
@@ -49,7 +89,8 @@ $('.secondary-slider__slider').slick({
 	arrows: false,
 	fade: true,
 	asNavFor: '.slider-youtube__nav',
-	autoplay: false
+	autoplay: false,
+	adaptiveHeight: true
 });
 $('.slider-youtube__nav').slick({
 	slidesToShow: 5,
@@ -58,7 +99,16 @@ $('.slider-youtube__nav').slick({
 	dots: false,
 	arrows: false,
 	centerMode: false,
-	focusOnSelect: true
+	focusOnSelect: true,
+	responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    }
+  ]
 
 });
 // =============== end youtube-slider

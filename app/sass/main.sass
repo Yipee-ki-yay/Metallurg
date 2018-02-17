@@ -63,8 +63,9 @@ body
 	color: #fff
 
 .wrapper
-	max-width: 1784px
+	max-width: 1804px
 	margin: 0 auto
+	padding: 0 10px
 
 .flexing
 	display: -webkit-flex
@@ -80,6 +81,7 @@ body
 	display: -ms-flex
 	display: -o-flex
 	display: flex
+	flex-wrap: wrap
 
 
 // begin header ================================================ 
@@ -159,11 +161,17 @@ body
 	background-color: $accent
 	height: 99px
 	font-size: 0
+	.header-search__btn
+		display: none
+		height: 99px;
+		position: static
+		transform: none
 
 .header-menu
 	list-style-type: none
 	padding-left: 180px
 	display: inline-block
+	vertical-align: top;
 	&__item 
 		display: inline-block
 		margin-right: 52px
@@ -217,6 +225,65 @@ body
 		transform: translate(-50%, -50%)
 		color: #fff
 		transition: all 0.6s ease
+
+// begin hamburger-btn
+.header-nav
+	.header-menus-wrapper
+		position: relative		
+	.hamburger-btn,
+	.close-hamburger-menu
+		position: relative
+		background-color: transparent
+		border: none
+		padding: 0
+		cursor: pointer
+		width: 28px
+		height: 12px
+		margin-top: 40px
+		display: none
+		span
+			position: absolute
+			right: 0
+			display: block
+			height: 1px
+			background-color: #fff
+			margin-bottom: 5px
+			border-right: 50px
+			transform: rotate(0deg)
+			transition: .25s ease-in-out
+			&:first-child
+				width: 28px
+				top: 0
+			&:nth-child(2)
+				width: 15px
+				top: 5px
+			&:last-child
+				width: 22px
+				top: 10px	
+	.close-hamburger-menu
+		position: absolute
+		top: 14px
+		right: 10px	
+		margin-top: 10px	
+		width: 20px
+		height: 20px
+		span
+			&:first-child
+				width: 28px
+				top: 0
+				transform: rotate(45deg)
+			&:last-child
+				width: 18px
+				top: 4px
+				transform: rotate(-45deg)
+	.sport-club-menu,
+	.main-cast-menu
+		display: none
+	.menus-open
+		display: block
+
+
+// end hamburger-btn
 		
 
 .header-logo
@@ -228,7 +295,7 @@ body
 			position: absolute			
 			left: -5px
 			bottom: -38px
-			transition: all 0.6s ease
+			transition: transform 0.6s ease
 			&:hover
 				transform: scale(1.05)
 
@@ -244,6 +311,7 @@ body
 .main-slider__item 
 	position: relative
 	max-width: 1334px
+
 .main-slider__item-descr 
 	position: absolute
 	left: 9%
@@ -490,7 +558,8 @@ body
 	&:active
 		color: $active-yellow
 		text-decoration: none
-
+.news-items.flexing
+	flex-wrap: wrap
 .news-item
 	max-width: 434px
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.0825691)

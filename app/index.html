@@ -56,36 +56,107 @@
 		</div>
 
 		<div class="header-nav">
-			<div class="wrapper flexing">				
-				<ul class="header-menu">
-					<li class="header-menu__item"><a href="#">Новости</a></li>
-					<li class="header-menu__item"><a href="#">Спортивный клуб</a></li>
-					<li class="header-menu__item"><a href="#">Матчи</a></li>
-					<li class="header-menu__item"><a href="#">Афиша</a></li>
-					<li class="header-menu__item"><a href="#">Стадион</a></li>
-					<li class="header-menu__item"><a href="#">Галерея</a></li>
-					<li class="header-menu__item"><a href="#">Форум</a></li>
-					<li class="header-menu__item"><a href="#">Fanshop</a></li>
-					<li class="header-menu__item"><a href="#">#photo</a></li>
-				</ul>
+			<div class="wrapper">
+				
+				<button class="header-search__btn">
+					<span class="icon-search"><span class="path1"></span><span class="path2"></span></span>
+				</button>
 
-				<ul class="header-social">
-					<li class="header-social__item">
-						<a class="header-social__link" href="#">
-							<span class="icon-social-facebook"></span>
-						</a>
-					</li>
-					<li class="header-social__item">
-						<a class="header-social__link" href="#">
-							<span class="icon-youtube"></span>
-						</a>
-					</li>
-					<li class="header-social__item">
-						<a class="header-social__link" href="#">
-							<span class="icon-instagram"></span>
-						</a>
-					</li>
-				</ul>
+				<div class="header-menus-wrapper flexing">
+
+					<ul class="header-menu">
+						<li class="header-menu__item"><a class="header-menu__link" href="#">Новости</a></li>
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="#">Спортивный клуб</a>
+							<!-- begin sport-club-menu -->
+							<ul class="sport-club-menu">
+								<li class="sport-club-menu__item">
+									<a class="sport-club-menu__link" href="#">Основной состав</a>
+									<!-- begin main-cast-menu -->
+									<ul class="main-cast-menu">
+										<li class="main-cast-menu__item">
+											<a href="#">Состав</a>
+										</li>
+										<li class="main-cast__item">
+											<a href="#">Тренеры</a>
+										</li>
+										<li class="main-cast__item">
+											<a href="#">Персонал</a>
+										</li>
+									</ul>
+									<!-- end main-cast-menu -->
+								</li>
+								<li class="sport-club-menu__item">
+									<a class="sport-club-menu__link" href="#">U 19</a>
+								</li>
+							</ul>
+							<!-- end sport-club-menu -->
+						</li>
+						<li class="header-menu__item">
+							<a class="header-menu__link" href="#">Матчи</a>
+							<!-- begin sport-club-menu -->
+							<ul class="sport-club-menu">
+								<li class="sport-club-menu__item">
+									<a class="sport-club-menu__link" href="#">Основной состав</a>
+									<!-- begin main-cast-menu -->
+									<ul class="main-cast-menu">
+										<li class="main-cast-menu__item">
+											<a href="#">Состав</a>
+										</li>
+										<li class="main-cast__item">
+											<a href="#">Тренеры</a>
+										</li>
+										<li class="main-cast__item">
+											<a href="#">Персонал</a>
+										</li>
+									</ul>
+									<!-- end main-cast-menu -->
+								</li>
+								<li class="sport-club-menu__item">
+									<a class="sport-club-menu__link" href="#">U 19</a>
+								</li>
+							</ul>
+							<!-- end sport-club-menu -->
+						</li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#">Афиша</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#">Стадион</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#">Галерея</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#">Форум</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#">Fanshop</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#">#photo</a></li>
+					</ul>
+
+					<ul class="header-social">
+						<li class="header-social__item">
+							<a class="header-social__link" href="#">
+								<span class="icon-social-facebook"></span>
+							</a>
+						</li>
+						<li class="header-social__item">
+							<a class="header-social__link" href="#">
+								<span class="icon-youtube"></span>
+							</a>
+						</li>
+						<li class="header-social__item">
+							<a class="header-social__link" href="#">
+								<span class="icon-instagram"></span>
+							</a>
+						</li>
+					</ul>
+
+					<button class="close-hamburger-menu">
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				
+				<button class="hamburger-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				
+
 			</div>
 		</div>
 
@@ -106,7 +177,7 @@
 				<!-- begin slider item ========-->
 				<div>
 					<div class="main-slider__item">
-						<a href="#">
+						<a href="#">							
 							<img class="main-slider__item-img" src="img/imges/slider_image1.jpg" alt="оффициальный сайт">
 						</a>						
 
@@ -120,7 +191,7 @@
 				<!-- begin slider item ========-->
 				<div>
 					<div class="main-slider__item">
-						<a href="#">
+						<a href="#">							
 							<img class="main-slider__item-img" src="img/imges/slider_image1.jpg" alt="оффициальный сайт">
 						</a>
 
@@ -134,8 +205,8 @@
 				<!-- begin slider item ========-->
 				<div>
 					<div class="main-slider__item">
-						<a href="#">
-							<img class="main-slider__item-img" src="img/imges/slider_image1.jpg" alt="оффициальный сайт">
+						<a href="#">							
+							<img class="main-slider__item-img" src="img/imges/slider_image1.jpg" alt="оффициальный сайт">							
 						</a>
 
 						<p class="main-slider__item-descr">
@@ -148,7 +219,7 @@
 				<!-- begin slider item ========-->
 				<div>
 					<div class="main-slider__item">
-						<a href="#">
+						<a href="#">							
 							<img class="main-slider__item-img" src="img/imges/slider_image1.jpg" alt="оффициальный сайт">
 						</a>
 
@@ -469,6 +540,7 @@
 
 					<a class="sections-header__link-item" href="#">Подробнее</a>
 				</header>
+
 				<!-- begin tournament-tabs-content-wrap -->
 				<div class="tournament-tabs-content-wrap">
 					<table class="tournament-table__table tournament-tab-content active">
@@ -771,43 +843,43 @@
 		<div class="partners">
 			<div class="wrapper flexing">
 				<h5>Наши партнеры</h5>				
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/logo_tonus.png" alt="tonus">
 					</a>
 				</div>
 				
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/logo_carlsberg.png" alt="carlsberg">
 					</a>
 				</div>
 
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/musin.zp.ua .png" alt="carlsberg">
 					</a>
 				</div>
 
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/logo_tonus.png" alt="tonus">
 					</a>
 				</div>
 				
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/logo_carlsberg.png" alt="carlsberg">
 					</a>
 				</div>
 
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/musin.zp.ua .png" alt="carlsberg">
 					</a>
 				</div>
 
-				<div>
+				<div class="partners-item">
 					<a href="#">
 						<img src="img/logos/logo_tonus.png" alt="tonus">
 					</a>
